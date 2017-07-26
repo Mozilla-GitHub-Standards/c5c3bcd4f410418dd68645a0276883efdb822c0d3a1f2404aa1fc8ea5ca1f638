@@ -1,3 +1,6 @@
+# docker-compose repos volume
+repos/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

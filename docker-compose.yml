@@ -1,0 +1,17 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+version: '2'
+services:
+  staging:
+    build:
+      context: .
+    ports:
+      - "9000:9000"
+      - "8080:8080"
+    volumes:
+      - .:/app/:ro
+      - ./repos/:/repos/
+    environment:
+      - UWSGI_HTTP=:8080
